@@ -1,5 +1,4 @@
-#include <unistd.h>
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memset(void *str, int a, size_t len)
 {

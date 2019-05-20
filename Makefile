@@ -1,24 +1,16 @@
-HEADERS = libft.h
-
-NAME = libft.a
-
 CC = gcc
-
 FLAG = -Wall -Wextra -Werror
 
-SOURCE = ft_memset.c test.c
+SOURCE = ft_putstr.c ft_memset.c
 
-OBJECT = $(SOURCE:.c=.o)
+dot_a: dot_o
+	ar rc libft.a *.o
 
-all: dotc
-	ar rc $(NAME) $(OBJECT) $(HEADERS)
-dotc:
-	$(CC) -c $(SOURCE) $(FLAG)
+dot_o:
+	$(CC) $(FLAG) -c $(SOURCE)
 
-clean:
+clean_o:
 	rm *.o
 
-fclean: clean
-	rm *.a
-
-re: fclean all
+clean_a:
+	rm libft.a
