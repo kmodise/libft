@@ -15,5 +15,5 @@
 
 int		main(void)
 {
-	printf("%c", ft_tolower('+'));
+	printf("%d", ft_isalnum('!'));
 }
