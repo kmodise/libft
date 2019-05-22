@@ -1,23 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmodise <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/22 10:04:04 by kmodise           #+#    #+#             */
-/*   Updated: 2019/05/22 10:30:53 by kmodise          ###   ########.fr       */
+/*   Created: 2019/05/22 08:43:19 by kmodise           #+#    #+#             */
+/*   Updated: 2019/05/22 09:54:58 by kmodise          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
+#include "libft.h"
+
+size_t		ft_strlen(const char *s)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+	size_t	count;
+	size_t	space;
+
+	count = 0;
+	space = 0;
+	while (s[count] != '\0')
 	{
-		return (1);
+		if (s[count] == ' ')
+		{
+			space++;
+		}
+		count++;
 	}
-	else
-	{
-		return (0);
-	}
+	count = count - space;
+	return (count);
 }

@@ -6,7 +6,7 @@
 /*   By: kmodise <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 10:11:25 by kmodise           #+#    #+#             */
-/*   Updated: 2019/05/21 12:05:07 by kmodise          ###   ########.fr       */
+/*   Updated: 2019/05/22 11:32:27 by kmodise          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 
 # include <unistd.h>
+# include <string.h>
 
 void	*ft_memset(void *str, int a, size_t len);
 void	ft_putstr(char *s);
@@ -26,4 +27,8 @@ int		ft_isalpha(int c);
 int		ft_isalnum(int c);
 int		ft_isdigit(int c);
 int		ft_isalpha(int c);
+size_t	ft_strlen(const char *str);
+char	*ft_strcpy(char *dest, const char *src);
+char	*ft_strncpy(char *dest, const char *src, size_t n);
+char	*ft_strcat(char *dest, const char *src);
 #endif

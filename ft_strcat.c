@@ -1,23 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmodise <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/22 10:04:04 by kmodise           #+#    #+#             */
-/*   Updated: 2019/05/22 10:30:53 by kmodise          ###   ########.fr       */
+/*   Created: 2019/05/22 11:08:11 by kmodise           #+#    #+#             */
+/*   Updated: 2019/05/22 14:51:29 by kmodise          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
+#include "libft.h"
+
+char	*ft_strcat(char *dest, const char *src)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+	int		len;
+	int		i;
+
+	i = 0;
+	len = 0;
+	while (dest[i] != '\0')
 	{
-		return (1);
+		i++;
 	}
-	else
+	while (src[len] != '\0')
 	{
-		return (0);
+		dest[i] = src[len];
+		len++;
+		i++;
 	}
+	dest[i] = '\0';
+	return (dest);
 }
