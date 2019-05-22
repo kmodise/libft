@@ -16,9 +16,9 @@
 int		main(void)
 {
 	char str1[] = "red";
-	//char str2[] = "clock";
-	//char *ptr;
+	char str2[] = "clock";
+	char *ptr;
 
-	//ptr = ft_strcat(str1, str2);
-	printf("%zu\n", ft_strlen(str1));
+	ptr = ft_strncat(str1, str2, 4);
+	printf("%s\n", ptr);
 }
