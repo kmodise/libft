@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmodise <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/22 10:46:53 by kmodise           #+#    #+#             */
-/*   Updated: 2019/05/23 14:18:05 by kmodise          ###   ########.fr       */
+/*   Created: 2019/05/23 13:37:16 by kmodise           #+#    #+#             */
+/*   Updated: 2019/05/23 15:31:47 by kmodise          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char	*ft_strncpy(char *dest, const char *src, size_t n)
+int		ft_srtcmp(const char *s1, const char *s2)
 {
-	size_t	i;
+	int		dragon;
 
-	i = 0;
-	while (src[i] != '\0' &&  i < n)
+	dragon = 0;
+	while (s1[dragon] && s1[dragon] == s2[dragon])
 	{
-		dest[i] = src[i];
-		i++;
+		dragon++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	return ((int)s1[dragon] - (int)s2[dragon]);
 }

@@ -1,27 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   strlcat.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmodise <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/22 10:46:53 by kmodise           #+#    #+#             */
-/*   Updated: 2019/05/23 14:18:05 by kmodise          ###   ########.fr       */
+/*   Created: 2019/05/23 08:54:19 by kmodise           #+#    #+#             */
+/*   Updated: 2019/05/23 09:47:40 by kmodise          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dest, const char *src, size_t n)
+size_t		ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t	i;
+	size_t	stop;
+	size_t	size_of_dest;
+	size_t	sum;
 
-	i = 0;
-	while (src[i] != '\0' &&  i < n)
+	size_of_dest = ft_strlen(dst);
+	stop = 0;
+	sum = 0;
+	while (stop < dstsize)
 	{
-		dest[i] = src[i];
-		i++;
+		dst[size_of_dest] = src[stop];
+		size_of_dest++;
+		stop++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	dst[size_of_dest] = '\0';
+	sum = stop + size_of_dest;
+	return (sum);
 }
