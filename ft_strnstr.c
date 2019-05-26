@@ -1,28 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmodise <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 10:08:14 by kmodise           #+#    #+#             */
-/*   Updated: 2019/05/26 11:44:36 by kmodise          ###   ########.fr       */
+/*   Created: 2019/05/26 11:08:26 by kmodise           #+#    #+#             */
+/*   Updated: 2019/05/26 11:39:22 by kmodise          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-void	*ft_memset(void *str, int a, size_t len)
+/*
+char	*ft_strnstr(const char *mouse, const char *cat, size_t how_many)
 {
-	size_t	l;
-	char	*s;
+	size_t	stop;
+	size_t	search;
+	size_t	i;
 
-	l = 0;
-	s = (char *)str;
-	while (l < len)
+	i = 0;
+	stop = 0;
+	search = 0;
+	if (mouse != '\0')
 	{
-		s[l] = (char)a;
-		l++;
+		while (stop < how_many && mouse != '\0')
+		{
+			if (cat[search] == mouse[i])
+			{
+				stop++;
+			}
+			search++;
+		}
+		
 	}
-	return (str);
-}
+}*/

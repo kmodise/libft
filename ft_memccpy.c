@@ -1,28 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmodise <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 10:08:14 by kmodise           #+#    #+#             */
-/*   Updated: 2019/05/26 11:44:36 by kmodise          ###   ########.fr       */
+/*   Created: 2019/05/26 15:01:53 by kmodise           #+#    #+#             */
+/*   Updated: 2019/05/26 15:35:00 by kmodise          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *str, int a, size_t len)
+void	*ft_memccpy(void *paste, const void *copy, int c, size_t n)
 {
-	size_t	l;
-	char	*s;
+	char	*ptrpaste;
+	char	*ptrcopy;
+	size_t	u;
 
-	l = 0;
-	s = (char *)str;
-	while (l < len)
+	u = 0;
+	ptrpaste = (char *)paste;
+	ptrcopy = (char *)copy;
+	while (n > 0 && ptrcopy[u] != (char)c)
 	{
-		s[l] = (char)a;
-		l++;
+		if (ptrcopy[u] == '\0')
+		{
+			break;
+		}
+		ptrpaste[u] = ptrcopy[u];
+		u++;
+		n--;
 	}
-	return (str);
+	ptrpaste[u] = '\0';
+	return (paste);
 }
