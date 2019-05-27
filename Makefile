@@ -1,7 +1,7 @@
 CC = gcc
 FLAG = -Wall -Wextra -Werror
 
-SOURCE = ft_memccpy.c ft_memcpy.c ft_bzero.c ft_strstr.c ft_strrchr.c ft_strcmp.c ft_strchr.c ft_strlcat.c ft_strncat.c ft_strcat.c ft_strncpy.c ft_strcpy.c ft_strlen.c ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_toupper.c ft_tolower.c ft_putstr.c ft_memset.c ft_putchar.c test.c
+SOURCE = ft_memcmp.c ft_memchr.c ft_memccpy.c ft_memcpy.c ft_bzero.c ft_strstr.c ft_strrchr.c ft_strcmp.c ft_strchr.c ft_strlcat.c ft_strncat.c ft_strcat.c ft_strncpy.c ft_strcpy.c ft_strlen.c ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_toupper.c ft_tolower.c ft_putstr.c ft_memset.c ft_putchar.c test.c
 
 run:
 	$(CC) $(FLAG) $(SOURCE) -o test

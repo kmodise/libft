@@ -1,23 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmodise <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/23 13:37:16 by kmodise           #+#    #+#             */
-/*   Updated: 2019/05/27 10:59:03 by kmodise          ###   ########.fr       */
+/*   Created: 2019/05/27 10:02:56 by kmodise           #+#    #+#             */
+/*   Updated: 2019/05/27 10:42:13 by kmodise          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_srtcmp(const char *s1, const char *s2)
-{
-	unsigned	dragon;
+#include "libft.h"
 
-	dragon = 0;
-	while (s1[dragon] && s1[dragon] == s2[dragon])
+void	*ft_memchr(const void *s, int c, size_t n)
+{
+	char	*store_s;
+	size_t		goku;
+	char	store_c;
+
+	store_c = (char)c;
+	goku = 0;
+	store_s = (char *)s;
+	while (goku < n && s != '\0')
 	{
-		dragon++;
+		if (store_s[goku] == store_c)
+		{
+			return ((char *)s + goku);
+		}
+		goku++;
 	}
-	return ((unsigned int)s1[dragon] - (unsigned int)s2[dragon]);
+	return (NULL);
 }

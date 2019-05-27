@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmodise <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 11:32:29 by kmodise           #+#    #+#             */
-/*   Updated: 2019/05/27 10:42:31 by kmodise          ###   ########.fr       */
+/*   Created: 2019/05/27 11:12:12 by kmodise           #+#    #+#             */
+/*   Updated: 2019/05/27 12:12:29 by kmodise          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-void	t(void *s, size_t n)
+int		ft_memcmp(const void *left, const void *right, size_t how_long)
 {
-	ft_memset(s, '0', n);
-}
+	char	*store_left;
+	char	*store_right;
+	size_t	vegita;
 
-int		main(void)
-{
-//	char s[] = "kakarot";
-	char s2[] = "hello";
-	//har *p;
-	//char *t;
-	
-	//ft_bzero(s, 2);
-	//printf("%s\n", ft_bzero(s, 5));
-	char *t;
-	t = ft_memchr(s2, '3', 4);
-	printf("%s\n", t);
+	vegita = 0;
+	store_left = (char *)left;
+	store_right = (char *)right;
+	while (vegita < how_long && store_right != '\0')
+	{
+		if (store_left[vegita] != store_right[vegita])
+		{
+			return ((unsigned int)store_left[vegita] - (unsigned int)store_right[vegita]);
+		}
+		vegita++;
+	}
+	return (0);
 }
