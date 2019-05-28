@@ -6,7 +6,7 @@
 /*   By: kmodise <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 10:11:25 by kmodise           #+#    #+#             */
-/*   Updated: 2019/05/27 12:03:58 by kmodise          ###   ########.fr       */
+/*   Updated: 2019/05/28 10:40:44 by kmodise          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,6 @@ void	*ft_memcpy(void *paste, const void *copy, size_t n);
 void	*ft_memccpy(void *paste, const void *copy, int c, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *left, const void *right, size_t how_long);
+char	*ft_strnstr(const char *mouse, const char *cat, size_t how_many);
+int		ft_strncmp(const char *levi, const char *kenny, size_t how_much);
 #endif

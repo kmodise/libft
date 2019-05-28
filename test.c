@@ -6,7 +6,7 @@
 /*   By: kmodise <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 11:32:29 by kmodise           #+#    #+#             */
-/*   Updated: 2019/05/27 10:42:31 by kmodise          ###   ########.fr       */
+/*   Updated: 2019/05/28 10:51:49 by kmodise          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,13 @@ void	t(void *s, size_t n)
 
 int		main(void)
 {
-//	char s[] = "kakarot";
-	char s2[] = "hello";
-	//har *p;
-	//char *t;
+	char s[] = "theshining";
+	char s2[] = "the";
+	int		p;
+	int		t;
 	
-	//ft_bzero(s, 2);
-	//printf("%s\n", ft_bzero(s, 5));
-	char *t;
-	t = ft_memchr(s2, '3', 4);
-	printf("%s\n", t);
+	p = strncmp(s, s2, 7);
+	printf("%d\n", p);
+	t = ft_strncmp(s, s2, 7);
+	printf("%d\n", t);
 }
