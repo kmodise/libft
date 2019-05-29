@@ -6,7 +6,7 @@
 /*   By: kmodise <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 10:02:56 by kmodise           #+#    #+#             */
-/*   Updated: 2019/05/27 10:42:13 by kmodise          ###   ########.fr       */
+/*   Updated: 2019/05/29 13:36:54 by kmodise          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	char	*store_s;
-	size_t		goku;
+	size_t	goku;
 	char	store_c;
 
 	store_c = (char)c;

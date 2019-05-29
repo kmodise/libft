@@ -1,37 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmodise <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/29 08:57:02 by kmodise           #+#    #+#             */
-/*   Updated: 2019/05/29 13:38:56 by kmodise          ###   ########.fr       */
+/*   Created: 2019/05/29 13:07:10 by kmodise           #+#    #+#             */
+/*   Updated: 2019/05/29 13:25:42 by kmodise          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_atoi(const char *str)
-{
-	int		result;
-	int		i;
-	int		p_m;
+#include "libft.h"
 
-	result = 0;
+void	*ft_memmove(void *dst, const void *src, size_t len)
+{
+	char	*hold_des;
+	char	*hold_src;
+	size_t	i;
+
 	i = 0;
-	p_m = 1;
-	while (str[i] == ' ' || str[i] == '\t')
+	hold_src = (char *)src;
+	hold_des = (char *)dst;
+	if (dst < src)
 	{
-		i++;
+		i = len;
+		while (hold_src[len])
+		{
+			hold_des[len] = hold_src[len];
+			len--;
+		}
 	}
-	if (str[i] == '-')
+	if (dst > src)
 	{
-		p_m = -1;
-		i++;
+		while (i < len)
+		{
+			hold_des[i] = hold_src[i];
+			i++;
+		}
 	}
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		result = result * 10 + str[i] - '0';
-		i++;
-	}
-	return (result * p_m);
+	return (dst);
 }

@@ -6,7 +6,7 @@
 /*   By: kmodise <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 10:11:25 by kmodise           #+#    #+#             */
-/*   Updated: 2019/05/28 10:40:44 by kmodise          ###   ########.fr       */
+/*   Updated: 2019/05/29 10:45:10 by kmodise          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <unistd.h>
 # include <string.h>
+# include <stdlib.h>
 
 void	*ft_memset(void *str, int a, size_t len);
 void	ft_putstr(char *s);
@@ -44,4 +45,7 @@ void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *left, const void *right, size_t how_long);
 char	*ft_strnstr(const char *mouse, const char *cat, size_t how_many);
 int		ft_strncmp(const char *levi, const char *kenny, size_t how_much);
+int		ft_atoi(const char *str);
+char	*ft_strdup(const char *s);
+void	*ft_memmove(void *dst, const void *src, size_t len);
 #endif
