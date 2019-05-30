@@ -6,7 +6,7 @@
 /*   By: kmodise <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/26 11:45:22 by kmodise           #+#    #+#             */
-/*   Updated: 2019/05/30 14:20:09 by kmodise          ###   ########.fr       */
+/*   Updated: 2019/05/30 14:43:33 by kmodise          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,5 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	size_t	i;
-	char	*zoom;
-
-	i = 0;
-	while (i < n)
-	{
-		zoom[i] = '0';
-		i++;
-	}
-	return (s);
+	ft_memset(s, 0, n);
 }
