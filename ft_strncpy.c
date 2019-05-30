@@ -19,7 +19,7 @@ char	*ft_strncpy(char *dest, const char *src, size_t n)
 	i = 0;
 	while (src[i] != '\0' && i < n)
 	{
-		dest[i] = src[i];
+		dest[i] = (char)src[i];
 		i++;
 	}
 	dest[i] = '\0';

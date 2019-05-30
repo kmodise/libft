@@ -10,6 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** try unsigned ptrcopy and paste
+*/
+
 #include "libft.h"
 
 void	*ft_memcpy(void *paste, const void *copy, size_t n)
@@ -21,11 +25,10 @@ void	*ft_memcpy(void *paste, const void *copy, size_t n)
 	ptrcopy = (char *)copy;
 	ptrpaste = (char *)paste;
 	count = 0;
-	while (n > 0)
+	while (count < n)
 	{
 		ptrpaste[count] = ptrcopy[count];
 		count++;
-		n--;
 	}
 	return (paste);
 }

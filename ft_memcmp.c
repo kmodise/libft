@@ -16,19 +16,19 @@ int		ft_memcmp(const void *left, const void *right, size_t how_long)
 {
 	char	*store_left;
 	char	*store_right;
-	size_t	vegita;
+	size_t	v;
 
-	vegita = 0;
+	ve = 0;
 	store_left = (char *)left;
 	store_right = (char *)right;
-	while (vegita < how_long && store_right != '\0')
+	while (v < how_long && store_right != '\0')
 	{
-		if (store_left[vegita] != store_right[vegita])
+		if (store_left[v] != store_right[v])
 		{
-			return ((unsigned int)store_left[vegita]
-					- (unsigned int)store_right[vegita]);
+			return ((unsigned int)store_left[v]
+					- (unsigned int)store_right[v]);
 		}
-		vegita++;
+		v++;
 	}
 	return (0);
 }
