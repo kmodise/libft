@@ -6,7 +6,7 @@
 /*   By: kmodise <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 09:25:45 by kmodise           #+#    #+#             */
-/*   Updated: 2019/05/29 13:36:14 by kmodise          ###   ########.fr       */
+/*   Updated: 2019/05/30 15:15:09 by kmodise          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ char	*ft_strrchr(const char *s, int c)
 {
 	int		i;
 
-	//char	*store;
 	i = ft_strlen(s);
 	while (i >= 0)
 	{

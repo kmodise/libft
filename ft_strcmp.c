@@ -6,21 +6,22 @@
 /*   By: kmodise <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 13:37:16 by kmodise           #+#    #+#             */
-/*   Updated: 2019/05/29 13:40:02 by kmodise          ###   ########.fr       */
+/*   Updated: 2019/05/30 15:20:17 by kmodise          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** strmp compares null and strnmp doesnt
+*/
+
 int		ft_srtcmp(const char *s1, const char *s2)
 {
-	unsigned	int	dragon;
+	unsigned	int	d;
 
-	dragon = 0;
-	while (s1[dragon] && s1[dragon] == s2[dragon])
+	d = 0;
+	while (s1[d] && s1[d] == s2[d])
 	{
-		/*
-		 ** strmp compares null and strnmp doesnt
-		 */
-		dragon++;
+		d++;
 	}
-	return ((unsigned int)s1[dragon] - (unsigned int)s2[dragon]);
+	return ((unsigned int)s1[d] - (unsigned int)s2[d]);
 }
