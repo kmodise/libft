@@ -6,9 +6,15 @@
 /*   By: kmodise <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 09:51:57 by kmodise           #+#    #+#             */
-/*   Updated: 2019/05/29 13:37:57 by kmodise          ###   ########.fr       */
+/*   Updated: 2019/05/30 14:37:50 by kmodise          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+**when howmuch is 0 the origional fucntion
+**returns 0 this one doesnt
+**so i had to specify it
+*/
 
 #include "libft.h"
 
@@ -19,9 +25,6 @@ int		ft_strncmp(const char *levi, const char *kenny, size_t how_much)
 	i = 0;
 	if (how_much == 0)
 	{
-		/*
-		 **when howmuch is 0 the origional fucntion returns 0 this one doesnt so i had to specify it
-		 */
 		return (0);
 	}
 	while (levi[i] != '\0' && i < how_much - 1 && levi[i] == kenny[i])
