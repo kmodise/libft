@@ -11,20 +11,20 @@ all: $(NAME)
 OBJ = $(SOURCE:.c=.o)
 
 norm:
-        norminette -R CheckForbiddenSourceHeader
-	
+	norminette -R CheckForbiddenSourceHeader
+
 $(NAME):
-        gcc $(FLAG) -c $(SOURCE)
-        ar rc $(NAME) $(OBJ)
-        ranlib $(NAME)
-	
+	gcc $(FLAG) -c $(SOURCE)
+	ar rc $(NAME) $(OBJ) libft.h
+	ranlib $(NAME)
+
 test: all
-        gcc $(flag) test.c
+	gcc $(flag) test.c
 
 clean:
-        rm *.o
+	rm -rf $(OBJ)
 
 fclean: clean
-        rm $(NAME)
-	
+	rm -rf $(NAME)
+
 re: fclean all
