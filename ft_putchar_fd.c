@@ -1,30 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmodise <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 11:32:29 by kmodise           #+#    #+#             */
-/*   Updated: 2019/05/31 09:43:52 by kmodise          ###   ########.fr       */
+/*   Created: 2019/05/31 09:16:02 by kmodise           #+#    #+#             */
+/*   Updated: 2019/05/31 09:29:19 by kmodise          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
 
-int		main(void)
+void	ft_putchar_fd(char c, int fd)
 {
-	//char s[] = "the shining";
-	//char s2[] = "rrrrrrttttttt";
-	//char s3[] = "the shining";
-	//char		p;
-	//char		t;
-
-	//p = putchar_fd('t', 2);
-	//printf("%c\n", p);
-	ft_putchar_fd('t', 6);
-	//printf("%c\n", t); 
+	write(fd, &c, 1);
 }
-

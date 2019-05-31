@@ -6,7 +6,7 @@
 /*   By: kmodise <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 11:12:12 by kmodise           #+#    #+#             */
-/*   Updated: 2019/05/30 14:34:02 by kmodise          ###   ########.fr       */
+/*   Updated: 2019/05/31 08:58:25 by kmodise          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int		ft_memcmp(const void *left, const void *right, size_t how_long)
 	char	*store_right;
 	size_t	v;
 
-	ve = 0;
+	v = 0;
 	store_left = (char *)left;
 	store_right = (char *)right;
 	while (v < how_long && store_right != '\0')

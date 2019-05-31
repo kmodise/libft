@@ -6,7 +6,7 @@
 /*   By: kmodise <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 08:43:19 by kmodise           #+#    #+#             */
-/*   Updated: 2019/05/23 13:22:55 by kmodise          ###   ########.fr       */
+/*   Updated: 2019/05/31 10:02:26 by kmodise          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,11 @@
 size_t		ft_strlen(const char *s)
 {
 	size_t	count;
-	size_t	space;
 
 	count = 0;
-	space = 0;
-	while (s[count] != '\0')
+	while (s[count])
 	{
-		if (s[count] == ' ')
-		{
-			space++;
-		}
 		count++;
 	}
-	count = count - space;
 	return (count);
 }

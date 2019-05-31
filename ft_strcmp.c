@@ -6,7 +6,7 @@
 /*   By: kmodise <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 13:37:16 by kmodise           #+#    #+#             */
-/*   Updated: 2019/05/30 15:20:17 by kmodise          ###   ########.fr       */
+/*   Updated: 2019/05/31 08:59:53 by kmodise          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 ** strmp compares null and strnmp doesnt
 */
 
-int		ft_srtcmp(const char *s1, const char *s2)
+int		ft_strcmp(const char *s1, const char *s2)
 {
 	unsigned	int	d;
 
