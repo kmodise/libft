@@ -6,7 +6,7 @@
 /*   By: kmodise <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 10:11:25 by kmodise           #+#    #+#             */
-/*   Updated: 2019/05/31 09:40:17 by kmodise          ###   ########.fr       */
+/*   Updated: 2019/05/31 15:47:56 by kmodise          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,4 +49,7 @@ int		ft_atoi(const char *str);
 char	*ft_strdup(const char *s);
 void	*ft_memmove(void *dst, const void *src, size_t len);
 void	ft_putchar_fd(char c, int fd);
+int		ft_strequ(char const *s1, char const *s2);
+int		ft_strnequ(char const *s1, char const *s2, size_t n);
+void	ft_putstr_fd(char const *s, int fd);
 #endif

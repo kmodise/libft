@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   ft_strnequ.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmodise <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 11:32:29 by kmodise           #+#    #+#             */
-/*   Updated: 2019/05/31 15:50:18 by kmodise          ###   ########.fr       */
+/*   Created: 2019/05/31 14:56:10 by kmodise           #+#    #+#             */
+/*   Updated: 2019/05/31 15:02:52 by kmodise          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
 
-int		main(void)
+int		ft_strnequ(char const *s1, char const *s2, size_t n)
 {
-	char s[] = "the shining";
-	//char s2[] = "rrrrrrttttttt";
-	//char s3[] = "the shining";
-	//char		p;
-	//char		t;
+	size_t	i;
 
-	//p = putchar_fd('t', 2);
-	//printf("%c\n", p);
-	ft_putstr_fd(s, 1);
-	//printf("%c\n", t); 
+	i = 0;
+	while (i < n && s1[i] == s2[i])
+	{
+		i++;
+	}
+	if (s1[i] - s2[i] == 0)
+	{
+		return (1);
+	}
+	else
+		return (0);
 }
-
