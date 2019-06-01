@@ -1,31 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   ft_strdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmodise <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 11:32:29 by kmodise           #+#    #+#             */
-/*   Updated: 2019/06/01 14:22:35 by kmodise          ###   ########.fr       */
+/*   Created: 2019/06/01 13:41:45 by kmodise           #+#    #+#             */
+/*   Updated: 2019/06/01 14:05:18 by kmodise          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
 
-int		main(void)
+void	ft_strdel(char **as)
 {
-	char s[] = "the shining";
-	//char s2[] = "rrrrrrttttttt";
-	//char s3[] = "the shining";
-	//char		p;
-	//char		t;
-
-	//p = putchar_fd('t', 2);
-	//printf("%c\n", p);
-	ft_strdel(&s);
-	printf("%s", s);
-	//printf("%c\n", t); 
+	free(*as);
+	*as = NULL;
 }
-

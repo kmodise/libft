@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmodise <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 11:32:29 by kmodise           #+#    #+#             */
-/*   Updated: 2019/06/01 14:22:35 by kmodise          ###   ########.fr       */
+/*   Created: 2019/06/01 11:06:43 by kmodise           #+#    #+#             */
+/*   Updated: 2019/06/01 13:40:24 by kmodise          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
-#include <stdlib.h>
 
-int		main(void)
+char	*ft_strnew(size_t size)
 {
-	char s[] = "the shining";
-	//char s2[] = "rrrrrrttttttt";
-	//char s3[] = "the shining";
-	//char		p;
-	//char		t;
+	char	*z;
+	size_t	i;
 
-	//p = putchar_fd('t', 2);
-	//printf("%c\n", p);
-	ft_strdel(&s);
-	printf("%s", s);
-	//printf("%c\n", t); 
+	i = 0;
+	z = (char *)malloc((size) * sizeof(*z));
+	if (z == NULL)
+	{
+		return (NULL);
+	}
+	while (i <= size)
+	{
+		z[i] = 0;
+		i++;
+	}
+	return (z);
 }
-
