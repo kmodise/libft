@@ -1,34 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmodise <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 11:32:29 by kmodise           #+#    #+#             */
-/*   Updated: 2019/06/02 12:35:07 by kmodise          ###   ########.fr       */
+/*   Created: 2019/06/02 10:56:13 by kmodise           #+#    #+#             */
+/*   Updated: 2019/06/02 11:12:18 by kmodise          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
 
-int		main(void)
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	char s[] = "the shining";
-	//char s2[] = "rrrrrrttttttt";
-	//char s3[] = "the shining";
-	//char		p;
-	//char		t;
+	unsigned int	i;
 
-	char *t;
-
-	t = NULL;
-	//p = putchar_fd('t', 2);
-	//printf("%c\n", p);
-	ft_strmapi(s, t);
-//	printf("%s", (char *)f);
-	//printf("%c\n", t); 
+	i = 0;
+	while (s[i] != '\0')
+	{
+		f(i, &s[i]);
+		i++;
+	}
 }
-

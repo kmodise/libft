@@ -6,7 +6,7 @@
 /*   By: kmodise <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 10:11:25 by kmodise           #+#    #+#             */
-/*   Updated: 2019/06/01 14:09:48 by kmodise          ###   ########.fr       */
+/*   Updated: 2019/06/02 12:20:21 by kmodise          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,4 +57,8 @@ void	ft_memdel(void **ap);
 char	*ft_strnew(size_t size);
 void	ft_strdel(char **as);
 void	ft_strclr(char *s);
+void	ft_striter(char *s, void (*f)(char *));
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+char	*ft_strmap(char const *s, char (*f)(char));
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 #endif

@@ -1,34 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   ft_strmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmodise <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 11:32:29 by kmodise           #+#    #+#             */
-/*   Updated: 2019/06/02 12:35:07 by kmodise          ###   ########.fr       */
+/*   Created: 2019/06/02 11:28:50 by kmodise           #+#    #+#             */
+/*   Updated: 2019/06/02 11:51:25 by kmodise          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
 
-int		main(void)
+char	*ft_strmap(char const *s, char (*f)(char))
 {
-	char s[] = "the shining";
-	//char s2[] = "rrrrrrttttttt";
-	//char s3[] = "the shining";
-	//char		p;
-	//char		t;
+	char	*p;
+	int		i;
 
-	char *t;
-
-	t = NULL;
-	//p = putchar_fd('t', 2);
-	//printf("%c\n", p);
-	ft_strmapi(s, t);
-//	printf("%s", (char *)f);
-	//printf("%c\n", t); 
+	i = 0;
+	p = (char *)malloc((ft_strlen(s)) + 1 * sizeof(char));
+	if (p == NULL)
+	{
+		return (NULL);
+	}
+	while (s[i] != '\0')
+	{
+		p[i] = f(s[i]);
+		i++;
+	}
+	p[i] = '\0';
+	return (p);
 }
-
