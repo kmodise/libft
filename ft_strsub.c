@@ -1,33 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmodise <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 11:32:29 by kmodise           #+#    #+#             */
-/*   Updated: 2019/06/02 13:10:08 by kmodise          ###   ########.fr       */
+/*   Created: 2019/06/02 12:44:01 by kmodise           #+#    #+#             */
+/*   Updated: 2019/06/02 13:08:56 by kmodise          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
 
-int		main(void)
+char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	char s[] = "the shining";
-	//char s2[] = "rrrrrrttttttt";
-	//char s3[] = "the shining";
-	//char		p;
-	//char		t;
+	char	*p;
+	size_t	i;
 
-	char *t;
-
-	//p = putchar_fd('t', 2);
-	//printf("%c\n", p);
-	t = ft_strsub(s, 2, 5);
-	printf("%s", t);
-	//printf("%c\n", t); 
+	i = 0;
+	p = (char *)malloc((len + 1) * sizeof(char));
+	if (p == NULL)
+	{
+		return (NULL);
+	}
+	while (i < len)
+	{
+		p[i] = (char)s[i + start];
+		i++;
+	}
+	return (p);
 }
-
