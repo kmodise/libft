@@ -6,7 +6,7 @@
 /*   By: kmodise <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 11:32:29 by kmodise           #+#    #+#             */
-/*   Updated: 2019/06/02 13:10:08 by kmodise          ###   ########.fr       */
+/*   Updated: 2019/06/02 13:32:29 by kmodise          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int		main(void)
 {
 	char s[] = "the shining";
 	//char s2[] = "rrrrrrttttttt";
-	//char s3[] = "the shining";
+	char s3[] = "the shining";
 	//char		p;
 	//char		t;
 
@@ -26,7 +26,7 @@ int		main(void)
 
 	//p = putchar_fd('t', 2);
 	//printf("%c\n", p);
-	t = ft_strsub(s, 2, 5);
+	t = ft_strjoin(s, s3);
 	printf("%s", t);
 	//printf("%c\n", t); 
 }
