@@ -6,7 +6,7 @@
 /*   By: kmodise <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/02 12:00:02 by kmodise           #+#    #+#             */
-/*   Updated: 2019/06/02 12:34:51 by kmodise          ###   ########.fr       */
+/*   Updated: 2019/06/02 16:16:41 by kmodise          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	unsigned int	i;
-	char	*p;
+	char			*p;
 
 	i = 0;
 	p = (char *)malloc((ft_strlen(s)) + 1 * sizeof(char));
