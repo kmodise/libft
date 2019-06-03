@@ -6,7 +6,7 @@
 /*   By: kmodise <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 09:31:57 by kmodise           #+#    #+#             */
-/*   Updated: 2019/05/29 09:39:00 by kmodise          ###   ########.fr       */
+/*   Updated: 2019/06/03 14:02:25 by kmodise          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ char	*ft_strdup(const char *s)
 	char	*stain;
 
 	i = 0;
-	len = 0;
-	stain = (char *)malloc(len * sizeof(*stain));
+	len = ft_strlen(s);
+	stain = (char *)malloc(len + 1 * sizeof(char));
 	if (stain == NULL)
 	{
 		return (stain);

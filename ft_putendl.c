@@ -6,7 +6,7 @@
 /*   By: kmodise <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 10:25:59 by kmodise           #+#    #+#             */
-/*   Updated: 2019/06/02 17:13:30 by kmodise          ###   ########.fr       */
+/*   Updated: 2019/06/03 11:41:05 by kmodise          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,13 @@
 
 void	ft_putendl(char const *s)
 {
-	ft_putstr(s);
+	size_t	i;
+
+	i = 0;
+	while (s[i] != '\0')
+	{
+		ft_putchar(s[i]);
+		i++;
+	}
 	ft_putchar('\n');
 }
