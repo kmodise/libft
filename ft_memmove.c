@@ -6,7 +6,7 @@
 /*   By: kmodise <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 13:07:10 by kmodise           #+#    #+#             */
-/*   Updated: 2019/06/02 16:53:05 by kmodise          ###   ########.fr       */
+/*   Updated: 2019/06/03 17:53:54 by kmodise          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,17 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	char	*hold_des;
-	char	*hold_src;
+	char	*hold;
 	size_t	i;
 
 	i = 0;
-	hold_src = (char *)src;
-	hold_des = (char *)dst;
-	if (dst < src)
+	hold = (char *)malloc((len + 1) * sizeof(char));
+	if (hold == NULL)
 	{
-		i = len;
-		while (hold_src[len])
-		{
-			hold_des[len] = hold_src[len];
-			len--;
-		}
+		return (NULL);
 	}
-	if (dst > src)
-	{
-		while (i < len)
-		{
-			hold_des[i] = hold_src[i];
-			i++;
-		}
-	}
+	ft_memcpy(hold, src, len);
+	ft_memcpy(dst, hold, len);
+	free(hold);
 	return (dst);
 }
