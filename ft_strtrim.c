@@ -1,23 +1,46 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kmodise <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/06/04 12:56:02 by kmodise           #+#    #+#             */
+/*   Updated: 2019/06/04 15:50:45 by kmodise          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
 char	*ft_strtrim(char const *s)
 {
-	int	i;
+	int		bgn;
+	int		end;
+	int		len;
+	int		l;
 	char	*dd;
-	char	*hold;
 
-	hold = (char *)s;
-	i = 0;
-	dd = (char)malloc((ft_strlen(s)) * sizeof(char));
-	while (s[i] != '\0')
+	bgn = ft_nofspc(s);
+	end = 1;
+	l = 0;
+	len = ft_strlen(s);
+	while (s[len - end] == ' ' || s[len - end] == '\n' || s[len - end] == '\t')
 	{
-		while (hold[i] == ' ' || hold[i] == '\n'
-				|| hold[i] == '\t')
-		{
-			i++;
-		}
-		dd[i] = hold[i];
-		i++;
+		end++;
 	}
+	len = len - bgn - end + 1;
+	if (len <= 0)
+		len = 0;
+	dd = (char *)malloc((len + 1) * sizeof(char));
+	if (dd == NULL)
+	{
+		return NULL;
+	}
+	while (l < len)
+	{
+		dd[l] = s[bgn + l];
+		l++;
+	}
+	dd[l] = '\0';
+	return (dd);
 }
