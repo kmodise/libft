@@ -6,7 +6,7 @@
 /*   By: kmodise <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/04 12:56:02 by kmodise           #+#    #+#             */
-/*   Updated: 2019/06/04 15:50:45 by kmodise          ###   ########.fr       */
+/*   Updated: 2019/06/05 10:59:34 by kmodise          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,19 +23,15 @@ char	*ft_strtrim(char const *s)
 	bgn = ft_nofspc(s);
 	end = 1;
 	l = 0;
-	len = ft_strlen(s);
+	len = (int)ft_strlen(s);
 	while (s[len - end] == ' ' || s[len - end] == '\n' || s[len - end] == '\t')
-	{
 		end++;
-	}
 	len = len - bgn - end + 1;
 	if (len <= 0)
 		len = 0;
 	dd = (char *)malloc((len + 1) * sizeof(char));
 	if (dd == NULL)
-	{
-		return NULL;
-	}
+		return (NULL);
 	while (l < len)
 	{
 		dd[l] = s[bgn + l];
