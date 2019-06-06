@@ -1,32 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmodise <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 11:32:29 by kmodise           #+#    #+#             */
-/*   Updated: 2019/06/06 17:10:14 by kmodise          ###   ########.fr       */
+/*   Created: 2019/06/06 15:16:09 by kmodise           #+#    #+#             */
+/*   Updated: 2019/06/06 17:09:57 by kmodise          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
 
-int		main(void)
+void	ft_putnbr(int i)
 {
-	/*int		i;
-
-	i = 10;
-	while (i <= 20)
+	if (i <= 9 && i >= 0)
 	{
-		ft_putnbr(i);
-		ft_putchar('\n');
-		i++;
-	}*/
-	ft_putnbr(-9);
-	ft_putchar('\n');
-	return (0);
+		ft_putchar((i % 10) + 48);
+	}
+	if (i >= 10)
+	{
+		ft_putnbr(i / 10);
+		ft_putnbr(i % 10);
+	}
+	if (i < 0)
+	{
+		ft_putchar('-');
+		ft_putchar(((i % 10) * -1) + 48);
+	}
 }
-
