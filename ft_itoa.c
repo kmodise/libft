@@ -6,43 +6,56 @@
 /*   By: kmodise <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/08 12:11:03 by kmodise           #+#    #+#             */
-/*   Updated: 2019/06/08 12:42:21 by kmodise          ###   ########.fr       */
+/*   Updated: 2019/06/08 16:41:43 by kmodise          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libf.h"
+#include "libft.h"
 
 int		how_many_dig(int n)
 {
 	int		k;
 
 	k = 0;
+	if (n <= 0)
+	{
+		k++;
+	}
 	while (n != 0)
 	{
 		n = n / 10;
-		k++
+		k++;
 	}
 	return (k);
 }
 
 char	*ft_itoa(int n)
 {
+	char	*s;
 	int		no_d;
 	int		i;
-	char	*s;
+	int		n_clone;
 
 	i = 0;
-	s = (char *)malloc((n + 1) * sizeof(char));
+	no_d = how_many_dig(n);
+	n_clone = n;
+	s = (char *)malloc((no_d + 1) * sizeof(char));	
 	if (s == NULL)
 	{
 		return (NULL);
 	}
-	no_d = how_many_dig(n);
-	while (no_d != i)
+	s[no_d] = '\0';
+	if (n < 0)
 	{
-		s[no_d] = n % 10 + 48;
-		n = n / 10;
-		no_d = no_d - 1;
+		s[0] = '-';
+		n_clone = n_clone * -1;
+		i++;
+	}
+	while (i < no_d)
+	{
+		no_d--;
+		s[no_d] = n_clone % 10 + 48;
+		n_clone = n_clone / 10;
 	}
 	return (s);
 }
