@@ -6,13 +6,13 @@
 /*   By: kmodise <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/09 14:21:00 by kmodise           #+#    #+#             */
-/*   Updated: 2019/06/10 11:53:17 by kmodise          ###   ########.fr       */
+/*   Updated: 2019/06/10 12:07:28 by kmodise          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_no_words(char *s, char c)
+int		ft_no_words(char const *s, char c)
 {
 	int		words;
 	int		i;
