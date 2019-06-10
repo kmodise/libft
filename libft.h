@@ -6,7 +6,7 @@
 /*   By: kmodise <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 10:11:25 by kmodise           #+#    #+#             */
-/*   Updated: 2019/06/09 10:15:32 by kmodise          ###   ########.fr       */
+/*   Updated: 2019/06/10 11:28:40 by kmodise          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,4 +70,5 @@ void	ft_putendl_fd(char const *s, int fd);
 void	ft_putnbr(int i);
 char	*ft_itoa(int n);
 void	ft_putnbr_fd(int n, int fd);
+char	**ft_strsplit(char const *s, char c);
 #endif
