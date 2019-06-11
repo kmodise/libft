@@ -6,7 +6,7 @@
 /*   By: kmodise <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 11:32:29 by kmodise           #+#    #+#             */
-/*   Updated: 2019/06/11 09:22:08 by kmodise          ###   ########.fr       */
+/*   Updated: 2019/06/11 10:13:35 by kmodise          ###   ########.fr       */
 /*   Updated: 2019/06/10 11:40:11 by kmodise          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
@@ -17,11 +17,12 @@
 
 int		main(void)
 {
-	/*char	**s;
-	char	*t = "*this*one**gold";
+	char	**s;
+	char	t[100];
 
+	ft_strcpy(t, "*hello**workl*");
 	s = ft_strsplit(t, '*');
-	printf("%s", **s);*/
+	printf("ft_ --- %s\n", *(s + 0));
 	return (0);
 }
 
