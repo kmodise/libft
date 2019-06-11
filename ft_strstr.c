@@ -6,7 +6,7 @@
 /*   By: kmodise <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 15:31:42 by kmodise           #+#    #+#             */
-/*   Updated: 2019/06/04 17:31:38 by kmodise          ###   ########.fr       */
+/*   Updated: 2019/06/11 17:44:39 by kmodise          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,17 +19,17 @@ char	*ft_strstr(const char *mouse, const char *cat)
 
 	i = 0;
 	l = 0;
-	if (cat[i] == '\0')
+	if (cat[l] == '\0')
 	{
 		return ((char *)&mouse[i]);
 	}
-	while (mouse[i] != '\0')
+	while (mouse[i])
 	{
-		while (mouse && cat[l] == mouse[i + l])
+		while (mouse[i + l] == cat[l] && cat[l])
 		{
 			l++;
 		}
-		if (cat[i] == '\0')
+		if (cat[l] == '\0')
 		{
 			return ((char *)&mouse[i]);
 		}
