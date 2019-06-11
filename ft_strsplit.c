@@ -6,7 +6,7 @@
 /*   By: kmodise <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/09 14:21:00 by kmodise           #+#    #+#             */
-/*   Updated: 2019/06/10 13:58:19 by kmodise          ###   ########.fr       */
+/*   Updated: 2019/06/11 09:45:21 by kmodise          ###   ########.fr       */
 /*   Updated: 2019/06/10 11:53:17 by kmodise          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
@@ -20,7 +20,7 @@ int		ft_no_words(char const *s, char c)
 
 	i = 0;
 	words = 0;
-	while (s[i] == '\0')
+	while (s[i])
 	{
 		while (s[i] == c)
 			i++;
@@ -55,7 +55,7 @@ char	**ft_strsplit(char const *s, char c)
 
 	 i = 0;
 	 k = 0;
-	 new_str = (char **)malloc(sizeof(char) * (ft_no_words(s, c) + 1));
+	 new_str = (char **)malloc(sizeof(char) * (ft_no_words(s, c)) + 1);
 	 if (new_str == NULL)
 	 {
 		 return (NULL);
