@@ -6,7 +6,7 @@
 /*   By: kmodise <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/26 11:08:26 by kmodise           #+#    #+#             */
-/*   Updated: 2019/05/30 14:32:01 by kmodise          ###   ########.fr       */
+/*   Updated: 2019/06/11 18:01:32 by kmodise          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,11 @@ char	*ft_strnstr(const char *mouse, const char *cat, size_t how_many)
 	size_t	i;
 
 	i = 0;
-	while (mouse[i] != '\0' && i < how_many)
+	while (mouse[i] && i < how_many)
 	{
 		search = 0;
 		while (cat[search] == mouse[i + search] &&
-				cat[search] != '\0' && search < how_many)
+				cat[search] && search + i < how_many)
 		{
 			search++;
 		}
@@ -37,5 +37,7 @@ char	*ft_strnstr(const char *mouse, const char *cat, size_t how_many)
 		}
 		i++;
 	}
+	if (cat[0] == '\0')
+		return ((char *)&mouse[i]);
 	return (NULL);
 }
