@@ -6,7 +6,7 @@
 /*   By: kmodise <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/01 11:06:43 by kmodise           #+#    #+#             */
-/*   Updated: 2019/06/01 13:40:24 by kmodise          ###   ########.fr       */
+/*   Updated: 2019/06/12 13:28:59 by kmodise          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strnew(size_t size)
 	size_t	i;
 
 	i = 0;
-	z = (char *)malloc((size) * sizeof(*z));
+	z = (char *)malloc((size + 1) * sizeof(char));
 	if (z == NULL)
 	{
 		return (NULL);
