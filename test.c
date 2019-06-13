@@ -6,7 +6,7 @@
 /*   By: kmodise <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 11:32:29 by kmodise           #+#    #+#             */
-/*   Updated: 2019/06/12 15:26:47 by kmodise          ###   ########.fr       */
+/*   Updated: 2019/06/13 14:06:52 by kmodise          ###   ########.fr       */
 /*   Updated: 2019/06/10 11:40:11 by kmodise          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
@@ -19,10 +19,13 @@ int		main(void)
 {
 	char	*s;
 	char	t[] = "one";
-	char	t1[] = "two";
+	char	t1[] = "one";
+	char	c = '\0';
 
 	//ft_strcpy(t, "*hello**workl*");
-	s = ft_strjoin(t, t1);
+	s = ft_strchr(t, c);
+	printf("%s\n", s);
+	s = strchr(t1, c);
 	printf("%s\n", s);
 	return (0);
 }
