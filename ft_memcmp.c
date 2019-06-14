@@ -6,7 +6,7 @@
 /*   By: kmodise <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 11:12:12 by kmodise           #+#    #+#             */
-/*   Updated: 2019/06/13 10:40:55 by kmodise          ###   ########.fr       */
+/*   Updated: 2019/06/14 14:01:31 by kmodise          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,23 @@
 
 int		ft_memcmp(const void *left, const void *right, size_t how_long)
 {
-	char	*store_left;
-	char	*store_right;
+	char	*s_left;
+	char	*s_right;
 	size_t	v;
 
 	v = 0;
-	store_left = (char *)left;
-	store_right = (char *)right;
-	while (v < how_long && store_right)
+	s_left = (char *)left;
+	s_right = (char *)right;
+	if (*s_right == '\0')
 	{
-		if (store_left[v] != store_right[v])
+		s_right[100] = 't';
+	}
+	while (v < how_long && s_right)
+	{
+		if (s_left[v] != s_right[v])
 		{
-			return ((unsigned char)store_left[v]
-					- (unsigned char)store_right[v]);
+			return ((unsigned char)s_left[v]
+					- (unsigned char)s_right[v]);
 		}
 		v++;
 	}

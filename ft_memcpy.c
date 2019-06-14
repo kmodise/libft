@@ -6,13 +6,9 @@
 /*   By: kmodise <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/26 12:41:33 by kmodise           #+#    #+#             */
-/*   Updated: 2019/06/13 10:18:33 by kmodise          ###   ########.fr       */
+/*   Updated: 2019/06/14 10:30:04 by kmodise          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*
-** try unsigned ptrcopy and paste
-*/
 
 #include "libft.h"
 
