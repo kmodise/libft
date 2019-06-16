@@ -6,7 +6,7 @@
 /*   By: kmodise <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/09 14:21:00 by kmodise           #+#    #+#             */
-/*   Updated: 2019/06/11 10:12:48 by kmodise          ###   ########.fr       */
+/*   Updated: 2019/06/16 10:08:31 by kmodise          ###   ########.fr       */
 /*   Updated: 2019/06/10 11:53:17 by kmodise          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
@@ -15,35 +15,25 @@
 
 int		ft_no_words(char const *s, char c)
 {
-	int		words;
+	int		n_w;
 	int		i;
+	int		len;
 
 	i = 0;
-	words = 0;
+	len = 0;
+	n_w = 0;
 	while (s[i])
 	{
-		while (s[i] == c)
-			i++;
-		if (s[i] != '\0')
-			words++;
-		while (s[i] && (s[i] != c))
-			i++;
+		if (s[i] != c)
+			len++;
+		if ((s[i] == c || s[i + 1] == '\0') && len != 0)
+		{
+			n_w++;
+			len = 0;
+		}
+		i++;
 	}
-	return (words);
-}
-
-char	*ft_strndup(const char *s, size_t n)
-{
-	char	*st;
-
-	st = (char *)malloc(sizeof(char) * (n + 1));
-	if (st == NULL)
-	{
-		return (NULL);
-	}
-	st = ft_strncpy(st, s, n);
-	st[n] = '\0';
-	return (st);
+	return (n_w);
 }
 
 char	**ft_strsplit(char const *s, char c)
@@ -55,7 +45,7 @@ char	**ft_strsplit(char const *s, char c)
 
 	 i = 0;
 	 k = 0;
-	 new_str = (char **)malloc(sizeof(char) * (ft_no_words(s, c)) + 1);
+	 new_str = (char **)malloc(sizeof(char *) * (ft_no_words(s, c)) + 1);
 	 if (new_str == NULL)
 	 {
 		 return (NULL);
