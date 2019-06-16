@@ -6,7 +6,7 @@
 /*   By: kmodise <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/08 12:11:03 by kmodise           #+#    #+#             */
-/*   Updated: 2019/06/08 16:41:43 by kmodise          ###   ########.fr       */
+/*   Updated: 2019/06/16 16:46:00 by kmodise          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,9 @@ char	*ft_itoa(int n)
 	i = 0;
 	no_d = how_many_dig(n);
 	n_clone = n;
-	s = (char *)malloc((no_d + 1) * sizeof(char));	
+	s = (char *)malloc((no_d + 1) * sizeof(char));
 	if (s == NULL)
-	{
 		return (NULL);
-	}
 	s[no_d] = '\0';
 	if (n < 0)
 	{

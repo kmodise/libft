@@ -6,7 +6,7 @@
 /*   By: kmodise <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 13:37:16 by kmodise           #+#    #+#             */
-/*   Updated: 2019/06/13 13:39:07 by kmodise          ###   ########.fr       */
+/*   Updated: 2019/06/16 16:44:37 by kmodise          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,6 @@ int		ft_strcmp(const char *s1, const char *s2)
 	{
 		d++;
 	}
-	return ((const unsigned char)s1[d] - 
+	return ((const unsigned char)s1[d] -
 			(const unsigned char)s2[d]);
 }

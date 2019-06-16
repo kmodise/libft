@@ -6,7 +6,7 @@
 /*   By: kmodise <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 10:36:52 by kmodise           #+#    #+#             */
-/*   Updated: 2019/06/14 13:50:23 by kmodise          ###   ########.fr       */
+/*   Updated: 2019/06/16 16:39:25 by kmodise          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,5 @@ char	*ft_strchr(const char *s, int c)
 		}
 		i++;
 	}
-		return (NULL);
+	return (NULL);
 }
