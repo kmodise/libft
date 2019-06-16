@@ -5,63 +5,67 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmodise <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/16 10:59:51 by kmodise           #+#    #+#             */
-/*   Updated: 2019/06/16 12:00:33 by kmodise          ###   ########.fr       */
+/*   Created: 2019/06/16 13:58:16 by kmodise           #+#    #+#             */
+/*   Updated: 2019/06/16 15:08:50 by kmodise          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_no_words(char const *s, char c)
+static int		ft_wrds(char const *s, char c)
 {
+	int		wrds;
 	int		i;
-	int		w;
 
 	i = 0;
-	w = 0;
+	wrds = 0;
 	while (s[i])
 	{
 		while (s[i] == c)
+		{
 			i++;
+		}
 		if (s[i] != '\0')
-			w++;
-		while (s[i] && (s[i] != c))
+		{
+			wrds++;
+		}
+		while (s[i] && s[i] != c)
+		{
 			i++;
+		}
 	}
-	return (w);
+	return (wrds);
 }
 
 char	**ft_strsplit(char const *s, char c)
 {
-	 int	i;
-	 int	j;
-	 int	k;
-	 char	**new_str;
+	char	**st;
+	int		i;
+	int		cut;
+	int		nxt;
 
-	 i = 0;
-	 k = 0;
-	 new_str = (char **)malloc(sizeof(char *) * (ft_no_words(s, c)) + 1);
-	 if (new_str == NULL)
-	 {
-		 return (NULL);
-	 }
-	 while (s[i])
-	 {
-		 while (s[i] == c)
-		 {
-			 i++;
-		 }
-		 j = i;
-		 while (s[i] && s[i] != c)
-		 {
-			 i++;
-		 }
-		 if (i > j)
-		 {
-			 new_str[k] = ft_strndup(s + j, i - j);
-			 k++;
-		 }
-	 }
-	 new_str[k] = NULL;
-	 return (new_str);
+	i = 0;
+	nxt = 0;
+	st = (char **)malloc(sizeof(char *) * (ft_wrds(s, c)) + 1);
+	if (st == NULL)
+		return (NULL);
+	while (st[i])
+	{
+		while (s[i] == c)
+		{
+			i++;
+		}
+		cut = i;
+		while (s[i] && s[i] != c)
+		{
+			i++;
+		}
+		if (i > cut)
+		{
+			st[nxt] = ft_strndup(s + cut, i - cut);
+			nxt++;
+		}	
+	}
+	st[nxt] = NULL;
+	return (st);
 }
