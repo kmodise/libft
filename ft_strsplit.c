@@ -6,7 +6,7 @@
 /*   By: kmodise <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/16 13:58:16 by kmodise           #+#    #+#             */
-/*   Updated: 2019/06/16 15:08:50 by kmodise          ###   ########.fr       */
+/*   Updated: 2019/06/16 16:30:59 by kmodise          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,22 +49,18 @@ char	**ft_strsplit(char const *s, char c)
 	st = (char **)malloc(sizeof(char *) * (ft_wrds(s, c)) + 1);
 	if (st == NULL)
 		return (NULL);
-	while (st[i])
+	while (s[i])
 	{
 		while (s[i] == c)
-		{
 			i++;
-		}
 		cut = i;
 		while (s[i] && s[i] != c)
-		{
 			i++;
-		}
 		if (i > cut)
 		{
-			st[nxt] = ft_strndup(s + cut, i - cut);
+			st[nxt] = ft_strndup((s + cut), (i - cut));
 			nxt++;
-		}	
+		}
 	}
 	st[nxt] = NULL;
 	return (st);
