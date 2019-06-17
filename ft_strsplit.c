@@ -6,7 +6,7 @@
 /*   By: kmodise <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/16 13:58:16 by kmodise           #+#    #+#             */
-/*   Updated: 2019/06/16 16:46:28 by kmodise          ###   ########.fr       */
+/*   Updated: 2019/06/17 10:42:29 by kmodise          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 static int		ft_wrds(char const *s, char c)
 {
-	int		wrds;
-	int		i;
+	int			wrds;
+	int			i;
 
 	i = 0;
 	wrds = 0;
@@ -37,12 +37,12 @@ static int		ft_wrds(char const *s, char c)
 	return (wrds);
 }
 
-char	**ft_strsplit(char const *s, char c)
+char			**ft_strsplit(char const *s, char c)
 {
-	char	**st;
-	int		i;
-	int		cut;
-	int		nxt;
+	char		**st;
+	int			i;
+	int			cut;
+	int			nxt;
 
 	i = 0;
 	nxt = 0;

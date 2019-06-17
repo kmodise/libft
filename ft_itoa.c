@@ -6,15 +6,15 @@
 /*   By: kmodise <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/08 12:11:03 by kmodise           #+#    #+#             */
-/*   Updated: 2019/06/16 16:46:00 by kmodise          ###   ########.fr       */
+/*   Updated: 2019/06/17 10:40:26 by kmodise          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		how_many_dig(int n)
+static int			how_many_dig(int n)
 {
-	int		k;
+	int				k;
 
 	k = 0;
 	if (n <= 0)
@@ -29,16 +29,16 @@ int		how_many_dig(int n)
 	return (k);
 }
 
-char	*ft_itoa(int n)
+char				*ft_itoa(int n)
 {
-	char	*s;
-	int		no_d;
-	int		i;
-	int		n_clone;
+	char			*s;
+	int				no_d;
+	int				i;
+	unsigned int	n_clone;
 
 	i = 0;
 	no_d = how_many_dig(n);
-	n_clone = n;
+	n_clone = (unsigned int)n;
 	s = (char *)malloc((no_d + 1) * sizeof(char));
 	if (s == NULL)
 		return (NULL);
