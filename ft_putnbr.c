@@ -6,7 +6,7 @@
 /*   By: kmodise <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/06 15:16:09 by kmodise           #+#    #+#             */
-/*   Updated: 2019/06/10 14:34:33 by kmodise          ###   ########.fr       */
+/*   Updated: 2019/06/19 17:34:00 by kmodise          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_putnbr(int i)
 {
 	if (i <= 9 && i >= 0)
 	{
-		ft_putchar((i % 10) + 48);
+		ft_putchar(i + 48);
 	}
 	if (i >= 10)
 	{
@@ -26,8 +26,7 @@ void	ft_putnbr(int i)
 	if (i < 0)
 	{
 		ft_putchar('-');
-		if (i != -1 || i != -2 || i != -3 || i != -4 || i != -5 ||
-				i != -6 || i != -7 || i != -8 || i != -9)
+		if (i < -9)
 		{
 			ft_putnbr((0 - (unsigned int)i) / 10);
 		}
