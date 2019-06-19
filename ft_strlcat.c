@@ -6,7 +6,7 @@
 /*   By: kmodise <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 08:54:19 by kmodise           #+#    #+#             */
-/*   Updated: 2019/06/14 09:18:05 by kmodise          ###   ########.fr       */
+/*   Updated: 2019/06/19 15:55:12 by kmodise          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,13 @@ size_t		ft_strlcat(char *dst, const char *src, size_t size)
 	sz = size - i;
 	if (sz == 0)
 		return (ft_strlen(src) + size);
-	len = i;
 	while (src[++j])
 	{
-		if (sz-- != 1)
+		if (sz != 1)
 		{
 			dst[i] = (char)src[j];
 			i++;
+			sz--;
 		}
 	}
 	dst[i] = '\0';
