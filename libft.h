@@ -6,7 +6,7 @@
 /*   By: kmodise <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 10:11:25 by kmodise           #+#    #+#             */
-/*   Updated: 2019/06/16 10:07:39 by kmodise          ###   ########.fr       */
+/*   Updated: 2019/06/22 11:46:44 by kmodise          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,4 +72,5 @@ char	*ft_itoa(int n);
 void	ft_putnbr_fd(int n, int fd);
 char	*ft_strndup(const char *s, size_t n);
 char	**ft_strsplit(char const *s, char c);
+int		mod(int n);
 #endif
